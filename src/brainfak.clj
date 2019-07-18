@@ -1,4 +1,14 @@
-(ns ^{:doc "Brainfuck (https://en.wikipedia.org/wiki/Brainfuck) interpreter\n\nBrainfuck language:\n> - increment the data pointer.\n< - decrement the data pointer.\n+ - increment the byte at the data pointer.\n- - decrement the byte at the data pointer.\n. - output the byte at the data pointer.\n, - input a byte and store it in the byte at the data pointer.\n[ - jump forward past the matching ] if the byte at the data pointer is zero.\n] - jump backward to the matching [ if the byte at the data pointer is nonzero.\n\nAny other byte in input is considered comment.\n"}
+(ns ^{:doc "Brainfuck (https://en.wikipedia.org/wiki/Brainfuck) interpreter
+Brainfuck language:
+> - increment the data pointer.
+< - decrement the data pointer.
++ - increment the byte at the data pointer.
+- - decrement the byte at the data pointer.
+. - output the byte at the data pointer.
+, - input a byte and store it in the byte at the data pointer.
+[ - jump forward past the matching ] if the byte at the data pointer is zero.
+] - jump backward to the matching [ if the byte at the data pointer is nonzero.
+Any other byte in input is considered comment."}
  brainfak)
 
 (defn matching-index
