@@ -14,7 +14,7 @@ Any other byte in input is considered comment."}
 (defn matching-index
   "return next (advancing inc-dec-fn direction) pairwise matching position of ch in
   byte vector prog or nil if not found."
-  [prog pos ch inc-dec-fn open close]
+ [prog pos ch inc-dec-fn open close]
   (let [prog-count (count prog)]
     (loop [curpos (inc-dec-fn pos)
            stack '()]
